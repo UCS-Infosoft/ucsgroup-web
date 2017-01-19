@@ -1,0 +1,10 @@
+.circle,
+#carousel li a,
+.quote-content{behavior: url(js/PIE.htc); position:relative;}
+
+.lightbox-image span{behavior: url(js/PIE.htc);}
+
+.lightbox-image span,
+#carousel-1 li .hover, #carousel-1 li a:hover .img {top:-999em}
+	.lightbox-image:hover span, #carousel-1 li a:hover .hover{top:0;}
+#banner .circle{border-radius:0;}

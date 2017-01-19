@@ -1,0 +1,70 @@
+nav{position: relative;}
+#menu-icon{
+	display:none;
+	font:400 31px/37px 'Contrail One', cursive;
+	color:#daac01;
+	text-align:center;
+	letter-spacing:-2px;
+	padding:28px 0 32px;
+	width:97px;
+	overflow:hidden;
+	background:url(../images/menu-icon-arrow.png) center 67px no-repeat #fff;
+	cursor:pointer;
+	border-radius:48px;
+}
+.menu {list-style:none;}
+.menu > li {
+	position:relative;
+	float:left;
+	font:400 42px/47px 'Contrail One', cursive;
+	text-shadow:1px 1px 0 rgba(0,0,0,.09);
+	letter-spacing:-2px;
+	padding:4px 34px 4px 0;
+	background:url(../images/menu-separator.png) right center no-repeat;
+	margin-right:25px;
+}
+	.menu > li.last-item{padding-right:0; background:none;}
+	.menu > li > a {color:#fff; text-decoration:none;}
+		.menu > li.sfHover > a,.menu > li > a:hover , .menu > li.current > a {text-decoration:none; color:#daac01;}
+	.menu .menu-arrow{display:none;}
+/***submenu***/
+.menu ul {
+	position:absolute;
+	top:-999em;
+	width:101px; 
+	display:none;
+	padding:33px 26px 38px;
+	background:#242424;
+	z-index:999;
+}
+.menu li li{
+	width:100%;
+	padding:0;
+	margin-bottom:3px;
+	position:relative;
+	font:400 22px/27px 'Contrail One', cursive;
+}
+	.menu li li a{color:#4d4d4d; text-decoration:none;}
+		.menu li li > a:hover,.menu li li.sfHover > a{color:#fff; text-decoration:none;}
+.menu li:hover ul, .menu li.sfHover ul {left:-33px; top:83px;}
+
+@media only screen and (max-width: 995px){
+	.menu > li {font-size:31px; line-height:37px; letter-spacing:-1px; padding:9px 26px 9px 0; margin-right:21px;}
+	.menu > li > a .menu-arrow{display:block; width:100%; height:10px; overflow:hidden; text-indent:-100%; font-size:0; line-height:0; background:url(../images/menu-arrow.png) center top no-repeat; position:absolute; top:45px; left:-13px;}
+		.menu > li.sfHover > a .menu-arrow, .menu > li > a:hover .menu-arrow, .menu > li.current > a .menu-arrow{background-position: center -45px;}
+}
+
+@media only screen and (max-width: 767px) {
+	nav{position:absolute; top:28px; right:0;}
+	#menu-icon{display:block;}
+	/*menu*/
+	.menu{display:none; position:absolute; top:107px; right:0; width:101px; padding:33px 26px 38px; background:#242424; z-index:999;}
+	.menu > li {float:none; width:100%; padding:0; margin-bottom:3px; margin-right:0; font-size:22px; line-height:27px; text-shadow:none; letter-spacing:0; background:none;}
+	.menu > li > a {color:#4d4d4d;}
+		.menu > li.sfHover > a,.menu > li > a:hover , .menu > li.current > a {color:#fff;}
+	.menu > li > a .menu-arrow{display:inline; width:auto; height:auto; text-indent:0; font-size:inherit; line-height:inherit; background:none; position:static;}
+	/***submenu***/
+	.menu ul {right:128px; left:auto !important; top:-33px !important;}
+}
+
+@media only screen and (min-width: 768px) {.menu {display:block !important;}}

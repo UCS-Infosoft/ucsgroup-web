@@ -1,0 +1,51 @@
+#banner{
+	position:relative;
+	font-size:0;
+	line-height:0;
+	word-spacing:-4px;
+	margin-bottom:116px;
+}
+	#banner .circle{
+		display:inline-block;
+		width:292px;
+		height:295px;
+		overflow:hidden;
+		background:url(../images/banner-circle.png) center top no-repeat;
+		font:italic 11px/17px "Trebuchet MS", Arial, Helvetica, sans-serif;
+		color:#343434;
+		text-decoration:none;
+		text-align:center;
+		word-spacing:0;
+		position:relative;
+	}
+		#banner .circle:hover{
+			background-position:center -343px;
+			text-decoration:none;
+			color:#daac01;
+			z-index:999 !important;
+		}
+		#banner .circle-1{margin-top:97px;}
+		#banner .circle-2{margin-top:12px; margin-left:-55px;}
+		#banner .circle-3{margin-top:141px; margin-left:-84px;}
+		#banner .circle-4{margin-left:-89px;}
+		#banner .circle .indents{padding:117px 40px 0;}
+
+@media only screen and (max-width: 995px){
+	#banner{margin-bottom:30px;}
+	#banner .circle{width:244px; height:247px; background-size:100% auto;}
+		#banner .circle:hover{background-position:center -289px;}
+		#banner .circle .indents{padding:90px 20px 0;}
+}
+@media only screen and (max-width: 767px){
+	#banner{margin-bottom:0;}
+	#banner .circle-1{margin-top:0;}
+	#banner .circle-2{margin-top:125px; margin-left:-68px;}
+	#banner .circle-3{margin-top:-120px; margin-left:0;}
+	#banner .circle-4{margin-top:5px; margin-left:-68px;}
+}
+@media only screen and (max-width: 479px){
+	#banner .circle-1{margin-top:0;}
+	#banner .circle-2{margin-top:-70px; margin-left:56px;}
+	#banner .circle-3{margin-top:-70px; margin-left:0;}
+	#banner .circle-4{margin-top:-70px; margin-left:56px;}
+}

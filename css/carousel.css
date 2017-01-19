@@ -1,0 +1,69 @@
+/******************carousel**********************/
+.es-carousel-wrapper{position:relative;}
+	.es-carousel-wrapper .es-carousel{width:100%; overflow:hidden; vertical-align:middle;}
+		.es-carousel-wrapper li{
+			float:left;
+			position:relative;
+			text-align:center;
+			color:#f4c8c9;
+		}
+		#carousel-1 li{
+			padding:33px 0 30px;
+			background:url(../images/carousel-item-separator.png) right center no-repeat;
+		}
+			#carousel-1 li.last{background:none;}
+			#carousel-1 li .indent-right{padding-right:15px;}
+		.es-carousel-wrapper h3{
+			display:inline-block;
+			max-width:70%;
+			vertical-align:middle;
+			padding:8px 27px 8px 0;
+			margin-right:12px;
+			background:url(../images/carousel-title-separator.png) right center no-repeat;
+		}
+		#carousel li a{display:block; border-radius:49%; -webkit-border-radius:1000px; text-decoration:none;}
+		#carousel-1 li a{display:inline-block; position:relative; max-width:90%;}
+			#carousel-1 li .hover{
+				position:absolute;
+				top:0;
+				left:0;
+				opacity:0;
+			}
+				#carousel-1 li a:hover .img{opacity:0;}
+				#carousel-1 li a:hover .hover{opacity:1;}
+.es-carousel-wrapper .es-nav{
+	display:inline-block;
+	padding:14px 0;
+	font-size:0;
+	line-height:0;
+	vertical-align:middle;
+}
+.es-carousel-wrapper .es-nav-prev, .es-carousel-wrapper .es-nav-next{
+	display:inline-block !important;
+	width:17px;
+	height:27px;
+	overflow:hidden;
+	background-position:center top;
+	background-repeat:no-repeat;
+	text-indent: -100%;
+	white-space: nowrap;
+	cursor:pointer;
+	z-index:996;
+}
+.es-carousel-wrapper .es-nav-prev{background-image:url(../images/carousel-prev.png); margin-right:7px;}
+.es-carousel-wrapper .es-nav-next{background-image:url(../images/carousel-next.png);}
+	.es-carousel-wrapper .es-nav-prev:hover, .es-carousel-wrapper .es-nav-next:hover{background-position:0 -42px;}
+
+/*-------------------------------------------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 995px) {
+	#carousel li, #carousel-2 li{width:236px !important;}
+	#carousel-1 li{width:187px !important;}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	#carousel-1 li{width:140px !important;}
+}
+@media only screen and (max-width: 479px) {
+	#carousel h4, #carousel-2 h4{font-size:24px; line-height:29px;}
+	.es-carousel-wrapper h3{width:80%;}
+}
